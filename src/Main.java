@@ -7,7 +7,7 @@ public class Main {
         System.out.println("\nЗадача 1");
         int deposit = 15000;//переменная "вклад" с заданным значением
         double sum = 0;//сумма накопленя
-        double increaseOnePercent = 1.01;//коэффициент роста на 1% - из прошлой домашки
+        double increaseOnePercent = 1.01;//коэффициент роста на 1% - из условий прошлой домашки
         int month = 0;
         while (sum < 2459000){
             sum = (sum + deposit) * increaseOnePercent;
@@ -64,9 +64,8 @@ public class Main {
         //задача 6
         System.out.println("\nЗадача 6");
         sum = 15000;//переменная была инициализирована в задаче 1, задатся новое значение
-        for (month = 1; month <= 108; month ++) {
-            sum = sum * increaseOnePercent;//в 9 годах 108 месяцев
-            //System.out.printf(Locale.US, "Месяц " + month + ", сумма накоплений равна %.2f рублей\n", sum);
+        for (month = 1; month <= 108; month ++) {//в 9 годах 108 месяцев
+            sum = sum * increaseOnePercent;
             if (month % 6 == 0) {
                 System.out.printf(Locale.US, "Месяц " + month + ", сумма накоплений равна %.2f рублей\n", sum);
             }
